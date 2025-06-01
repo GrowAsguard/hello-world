@@ -1,0 +1,12 @@
+---
+- name: Deploy Maven Artifact
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Copy the artifact 
+      copy: 
+        src: "/home/admin/Desktop/devops/hello-world/target/hello-world-1.0-SNAPSHOT.jar"
+        dest: "/home/admin/Desktop/devops/deploy/hello-world.jar"
+
